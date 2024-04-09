@@ -40,7 +40,7 @@ public:
   CDnsSeedOpts() : nThreads(96), nDnsThreads(4), ip_addr("::"), nPort(53), nP2Port(0), nMinimumHeight(0), mbox(NULL), ns(NULL), host(NULL), tor(NULL), fUseTestNet(false), fWipeBan(false), fWipeIgnore(false), ipv4_proxy(NULL), ipv6_proxy(NULL), magic(NULL) {}
 
   void ParseCommandLine(int argc, char **argv) {
-    static const char *help = "Litecoin-seeder\n"
+    static const char *help = "Dogmcoin-seeder\n"
                               "Usage: %s -h <host> -n <ns> [-m <mbox>] [-t <threads>] [-p <port>]\n"
                               "\n"
                               "Options:\n"
@@ -480,7 +480,7 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"dnsseed.litecoinpool.org", "seed-a.litecoin.loshan.co.uk", "dnsseed.thrasher.io", ""};
+static const string mainnet_seeds[] = {"dnsseed.dogmcoin.com", "dnsseed1.dogmcoin.com", "dnsseed2.dogmcoin.com", "dnsseed.dogmcoin.org", "dnsseed1.dogmcoin.org", "dnsseed2.dogmcoin.org"};
 static const string testnet_seeds[] = {"seed-b.litecoin.loshan.co.uk", "dnsseed-testnet.thrasher.io", ""};
 static const string *seeds = mainnet_seeds;
 static vector<string> vSeeds;
